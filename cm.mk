@@ -18,18 +18,18 @@
 $(call inherit-product, vendor/cm/config/cdma.mk)
 
 # Release name
-PRODUCT_RELEASE_NAME := C8817D
+PRODUCT_RELEASE_NAME := G620S
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/huawei/c8817d/full_c8817d.mk)
+$(call inherit-product, device/huawei/g620s/full_g620s.mk)
 
 # Torch
 PRODUCT_PACKAGES += \
     Torch
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := c8817d
-PRODUCT_NAME := cm_c8817d
+PRODUCT_DEVICE := g620s
+PRODUCT_NAME := cm_g620s

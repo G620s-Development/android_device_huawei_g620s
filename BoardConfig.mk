@@ -19,9 +19,9 @@
 # Product-specific compile-time definitions.
 #
 
-LOCAL_PATH := device/huawei/c8817d
+LOCAL_PATH := device/huawei/g620s
 
--include vendor/huawei/c8817d/BoardConfigVendor.mk
+-include vendor/huawei/g620s/BoardConfigVendor.mk
 
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
@@ -31,7 +31,7 @@ TARGET_NO_RADIOIMAGE := true
 TARGET_NO_RPC := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := c8817d,C8817D,hwc8817d,hwC8817D
+TARGET_OTA_ASSERT_DEVICE := g620s,G620S,hwg620s,hwG620S
 
 # Platform
 TARGET_ARCH := arm
@@ -63,9 +63,10 @@ BLUETOOTH_HCI_USE_MCT := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
 # Camera
+#COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_USE_VENDOR_CAMERA_EXT := true
-COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
+
 
 # Classpath
 PRODUCT_BOOT_JARS := $(subst $(space),:,$(PRODUCT_BOOT_JARS))
@@ -89,12 +90,11 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 USE_OPENGL_RENDERER := true
 
 # Hardware
-#BOARD_HARDWARE_CLASS := device/huawei/c8817d/cmhw
+#BOARD_HARDWARE_CLASS := device/huawei/g620s/cmhw
 
 # Init
 TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_c8817d.c
 
 # Liblight
 TARGET_PROVIDES_LIBLIGHT := true

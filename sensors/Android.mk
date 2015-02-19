@@ -1,6 +1,6 @@
 ifneq ($(filter msm8960 msm8610 msm8916,$(TARGET_BOARD_PLATFORM)),)
 # Disable temporarily for compilling error
-ifeq ($(strip $(TARGET_DEVICE)),c8817d)
+ifeq ($(strip $(TARGET_DEVICE)),g620s)
 ifneq ($(BUILD_TINY_ANDROID),true)
 LOCAL_PATH := $(call my-dir)
 

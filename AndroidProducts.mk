@@ -15,4 +15,4 @@
 
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/full_c8817d.mk
+	$(LOCAL_DIR)/full_g620s.mk

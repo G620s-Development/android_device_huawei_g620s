@@ -3,7 +3,7 @@ PERL		= perl
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 
-LOCAL_PRIVATE_PATH := device/huawei/c8817d/kernel
+LOCAL_PRIVATE_PATH := device/huawei/g620s/kernel
 
 KERNEL_OUT := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ
 KERNEL_CONFIG := $(LOCAL_PRIVATE_PATH)/user/.config

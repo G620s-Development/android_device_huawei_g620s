@@ -16,99 +16,109 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-LOCAL_PATH := device/huawei/c8817d
+LOCAL_PATH := device/huawei/g620s
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # media_profiles and media_codecs xmls for 8916
 PRODUCT_COPY_FILES += \
-    device/huawei/c8817d/media/media_profiles_8916.xml:system/etc/media_profiles.xml \
-    device/huawei/c8817d/media/media_codecs_8916.xml:system/etc/media_codecs.xml
+    device/huawei/g620s/media/media_profiles_8916.xml:system/etc/media_profiles.xml \
+    device/huawei/g620s/media/media_codecs_8916.xml:system/etc/media_codecs.xml
 
 # Audio configuration file
 PRODUCT_COPY_FILES += \
-    device/huawei/c8817d/audio_policy.conf:system/etc/audio_policy.conf \
-    device/huawei/c8817d/mixer_paths_mtp.xml:system/etc/mixer_paths_mtp.xml \
-    device/huawei/c8817d/mixer_paths_qrd_skuh.xml:system/etc/mixer_paths_qrd_skuh.xml \
-    device/huawei/c8817d/mixer_paths_qrd_skui.xml:system/etc/mixer_paths_qrd_skui.xml \
-    device/huawei/c8817d/mixer_paths_qrd_skuhf.xml:system/etc/mixer_paths_qrd_skuhf.xml \
-    device/huawei/c8817d/mixer_paths.xml:system/etc/mixer_paths.xml
+    device/huawei/g620s/configs/audio_policy.conf:system/etc/audio_policy.conf \
+    device/huawei/g620s/configs/mixer_paths_mtp.xml:system/etc/mixer_paths_mtp.xml \
+    device/huawei/g620s/configs/mixer_paths_qrd_skuh.xml:system/etc/mixer_paths_qrd_skuh.xml \
+    device/huawei/g620s/configs/mixer_paths_qrd_skui.xml:system/etc/mixer_paths_qrd_skui.xml \
+    device/huawei/g620s/configs/mixer_paths_qrd_skuhf.xml:system/etc/mixer_paths_qrd_skuhf.xml \
+    device/huawei/g620s/configs/mixer_paths.xml:system/etc/mixer_paths.xml
+
+# Audio calibration
+PRODUCT_COPY_FILES += \
+    device/huawei/g620s/audio/Bluetooth_cal.acdb:system/etc/Bluetooth_cal.acdb \
+    device/huawei/g620s/audio/General_cal.acdb:system/etc/General_cal.acdb \
+    device/huawei/g620s/audio/Global_cal.acdb:system/etc/Global_cal.acdb \
+    device/huawei/g620s/audio/Handset_cal.acdb:system/etc/Handset_cal.acdb \
+    device/huawei/g620s/audio/Hdmi_cal.acdb:system/etc/Hdmi_cal.acdb \
+    device/huawei/g620s/audio/Headset_cal.acdb:system/etc/Headset_cal.acdb \
+    device/huawei/g620s/audio/Speaker_cal.acdb:system/etc/Speaker_cal.acdb
 
 # Diag cfg
 PRODUCT_COPY_FILES += \
-    device/huawei/c8817d/rootdir/etc/DiagCfg/Diag.cfg:system/etc/DiagCfg/Diag.cfg
+    device/huawei/g620s/rootdir/etc/DiagCfg/Diag.cfg:system/etc/DiagCfg/Diag.cfg
 
 # DPM
 PRODUCT_COPY_FILES += \
-    device/huawei/c8817d/rootdir/etc/dpm/fdMgr/fd.conf:system/etc/dpm/fdMgr/fd.conf
+    device/huawei/g620s/rootdir/etc/dpm/fdMgr/fd.conf:system/etc/dpm/fdMgr/fd.conf
 
 # gps/location secuity configuration file
 PRODUCT_COPY_FILES += \
-    device/huawei/c8817d/sec_config:system/etc/sec_config
+    device/huawei/g620s/configs/sec_config:system/etc/sec_config
 
 # Listen configuration file
 PRODUCT_COPY_FILES += \
-    device/huawei/c8817d/listen_platform_info.xml:system/etc/listen_platform_info.xml
+    device/huawei/g620s/configs/listen_platform_info.xml:system/etc/listen_platform_info.xml
 
 PRODUCT_COPY_FILES += \
-    device/huawei/c8817d/rootdir/etc/capability.xml:system/etc/capability.xml \
-    device/huawei/c8817d/rootdir/etc/device_monitor_for_nff.conf:system/etc/device_monitor_for_nff.conf \
-    device/huawei/c8817d/rootdir/etc/device_state_monitor.conf:system/etc/device_state_monitor.conf \
-    device/huawei/c8817d/rootdir/etc/globalAutoAdapt-conf.xml:system/etc/globalAutoAdapt-conf.xml \
-    device/huawei/c8817d/rootdir/etc/globalMatchs-conf.xml:system/etc/globalMatchs-conf.xml \
-    device/huawei/c8817d/rootdir/etc/qlog-conf.xml:system/etc/qlog-conf.xml \
-    device/huawei/c8817d/rootdir/etc/renice-loggers.sh:system/etc/renice-loggers.sh \
-    device/huawei/c8817d/rootdir/etc/virtualNets-conf.xml:system/etc/virtualNets-conf.xml \
-    device/huawei/c8817d/rootdir/etc/wfdconfig.xml:system/etc/wfdconfig.xml \
-    device/huawei/c8817d/rootdir/etc/wfdconfigsink.xml:system/etc/wfdconfigsink.xml
+    device/huawei/g620s/rootdir/etc/capability.xml:system/etc/capability.xml \
+    device/huawei/g620s/rootdir/etc/device_monitor_for_nff.conf:system/etc/device_monitor_for_nff.conf \
+    device/huawei/g620s/rootdir/etc/device_state_monitor.conf:system/etc/device_state_monitor.conf \
+    device/huawei/g620s/rootdir/etc/globalAutoAdapt-conf.xml:system/etc/globalAutoAdapt-conf.xml \
+    device/huawei/g620s/rootdir/etc/globalMatchs-conf.xml:system/etc/globalMatchs-conf.xml \
+    device/huawei/g620s/rootdir/etc/qlog-conf.xml:system/etc/qlog-conf.xml \
+    device/huawei/g620s/rootdir/etc/renice-loggers.sh:system/etc/renice-loggers.sh \
+    device/huawei/g620s/rootdir/etc/virtualNets-conf.xml:system/etc/virtualNets-conf.xml \
+    device/huawei/g620s/rootdir/etc/wfdconfig.xml:system/etc/wfdconfig.xml \
+    device/huawei/g620s/rootdir/etc/wfdconfigsink.xml:system/etc/wfdconfigsink.xml
 
 PRODUCT_COPY_FILES += \
-    device/huawei/c8817d/whitelist_appops.xml:system/etc/whitelist_appops.xml
+    device/huawei/g620s/configs/whitelist_appops.xml:system/etc/whitelist_appops.xml
 
 PRODUCT_COPY_FILES += \
-    device/huawei/c8817d/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
-    device/huawei/c8817d/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-    device/huawei/c8817d/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
-    device/huawei/c8817d/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+    device/huawei/g620s/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+    device/huawei/g620s/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
+    device/huawei/g620s/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
+    device/huawei/g620s/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 # Logmask
 PRODUCT_COPY_FILES += \
-    device/huawei/c8817d/rootdir/etc/logmask/default_diag_mask.cfg:system/etc/logmask/default_diag_mask.cfg \
-    device/huawei/c8817d/rootdir/etc/logmask/dynamic_debug_mask.cfg:system/etc/logmask/dynamic_debug_mask.cfg \
-    device/huawei/c8817d/rootdir/etc/logmask/qdss.cfg:system/etc/logmask/qdss.cfg
+    device/huawei/g620s/rootdir/etc/logmask/default_diag_mask.cfg:system/etc/logmask/default_diag_mask.cfg \
+    device/huawei/g620s/rootdir/etc/logmask/dynamic_debug_mask.cfg:system/etc/logmask/dynamic_debug_mask.cfg \
+    device/huawei/g620s/rootdir/etc/logmask/qdss.cfg:system/etc/logmask/qdss.cfg
 
 # Nfc
 PRODUCT_COPY_FILES += \
-    device/huawei/c8817d/hardfault.cfg:system/etc/nfc/hardfault.cfg \
-    device/huawei/c8817d/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    device/huawei/c8817d/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
-    device/huawei/c8817d/nfc-nci.conf:system/etc/nfc-nci.conf \
-    device/huawei/c8817d/nfcee_access.xml:system/etc/nfcee_access.xml
+    device/huawei/g620s/configs/hardfault.cfg:system/etc/nfc/hardfault.cfg \
+    device/huawei/g620s/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    device/huawei/g620s/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
+    device/huawei/g620s/configs/nfc-nci.conf:system/etc/nfc-nci.conf \
+    device/huawei/g620s/configs/nfcee_access.xml:system/etc/nfcee_access.xml
 
 # Offmode charge
 PRODUCT_COPY_FILES += \
-    device/huawei/c8817d/rootdir/charger:root/charger \
-    device/huawei/c8817d/rootdir/res/images/720x1280/batt_level_scale.png:root/res/images/720x1280/batt_level_scale.png \
-    device/huawei/c8817d/rootdir/res/images/720x1280/batt_level_top.png:root/res/images/720x1280/batt_level_top.png \
-    device/huawei/c8817d/rootdir/res/images/720x1280/bg.png:root/res/images/720x1280/bg.png \
-    device/huawei/c8817d/rootdir/res/images/720x1280/empty_charge.png:root/res/images/720x1280/empty_charge.png \
-    device/huawei/c8817d/rootdir/res/images/720x1280/err_charge.png:root/res/images/720x1280/err_charge.png \
-    device/huawei/c8817d/rootdir/res/images/720x1280/full_charge.png:root/res/images/720x1280/full_charge.png \
-    device/huawei/c8817d/rootdir/res/images/720x1280/number_0.png:root/res/images/720x1280/number_0.png \
-    device/huawei/c8817d/rootdir/res/images/720x1280/number_1.png:root/res/images/720x1280/number_1.png \
-    device/huawei/c8817d/rootdir/res/images/720x1280/number_2.png:root/res/images/720x1280/number_2.png \
-    device/huawei/c8817d/rootdir/res/images/720x1280/number_3.png:root/res/images/720x1280/number_3.png \
-    device/huawei/c8817d/rootdir/res/images/720x1280/number_4.png:root/res/images/720x1280/number_4.png \
-    device/huawei/c8817d/rootdir/res/images/720x1280/number_5.png:root/res/images/720x1280/number_5.png \
-    device/huawei/c8817d/rootdir/res/images/720x1280/number_6.png:root/res/images/720x1280/number_6.png \
-    device/huawei/c8817d/rootdir/res/images/720x1280/number_7.png:root/res/images/720x1280/number_7.png \
-    device/huawei/c8817d/rootdir/res/images/720x1280/number_8.png:root/res/images/720x1280/number_8.png \
-    device/huawei/c8817d/rootdir/res/images/720x1280/number_9.png:root/res/images/720x1280/number_9.png \
-    device/huawei/c8817d/rootdir/res/images/720x1280/percent_10.png:root/res/images/720x1280/percent_10.png \
-    device/huawei/c8817d/rootdir/res/images/720x1280/percent_5.png:root/res/images/720x1280/percent_5.png \
-    device/huawei/c8817d/rootdir/res/images/720x1280/percent_sign.png:root/res/images/720x1280/percent_sign.png \
-    device/huawei/c8817d/rootdir/res/images/mmi/fail.png:root/res/images/mmi/fail.png \
-    device/huawei/c8817d/rootdir/res/images/mmi/pass.png:root/res/images/mmi/pass.png
+    device/huawei/g620s/rootdir/charger:root/charger \
+    device/huawei/g620s/rootdir/res/images/720x1280/batt_level_scale.png:root/res/images/720x1280/batt_level_scale.png \
+    device/huawei/g620s/rootdir/res/images/720x1280/batt_level_top.png:root/res/images/720x1280/batt_level_top.png \
+    device/huawei/g620s/rootdir/res/images/720x1280/bg.png:root/res/images/720x1280/bg.png \
+    device/huawei/g620s/rootdir/res/images/720x1280/empty_charge.png:root/res/images/720x1280/empty_charge.png \
+    device/huawei/g620s/rootdir/res/images/720x1280/err_charge.png:root/res/images/720x1280/err_charge.png \
+    device/huawei/g620s/rootdir/res/images/720x1280/full_charge.png:root/res/images/720x1280/full_charge.png \
+    device/huawei/g620s/rootdir/res/images/720x1280/number_0.png:root/res/images/720x1280/number_0.png \
+    device/huawei/g620s/rootdir/res/images/720x1280/number_1.png:root/res/images/720x1280/number_1.png \
+    device/huawei/g620s/rootdir/res/images/720x1280/number_2.png:root/res/images/720x1280/number_2.png \
+    device/huawei/g620s/rootdir/res/images/720x1280/number_3.png:root/res/images/720x1280/number_3.png \
+    device/huawei/g620s/rootdir/res/images/720x1280/number_4.png:root/res/images/720x1280/number_4.png \
+    device/huawei/g620s/rootdir/res/images/720x1280/number_5.png:root/res/images/720x1280/number_5.png \
+    device/huawei/g620s/rootdir/res/images/720x1280/number_6.png:root/res/images/720x1280/number_6.png \
+    device/huawei/g620s/rootdir/res/images/720x1280/number_7.png:root/res/images/720x1280/number_7.png \
+    device/huawei/g620s/rootdir/res/images/720x1280/number_8.png:root/res/images/720x1280/number_8.png \
+    device/huawei/g620s/rootdir/res/images/720x1280/number_9.png:root/res/images/720x1280/number_9.png \
+    device/huawei/g620s/rootdir/res/images/720x1280/percent_10.png:root/res/images/720x1280/percent_10.png \
+    device/huawei/g620s/rootdir/res/images/720x1280/percent_5.png:root/res/images/720x1280/percent_5.png \
+    device/huawei/g620s/rootdir/res/images/720x1280/percent_sign.png:root/res/images/720x1280/percent_sign.png \
+    device/huawei/g620s/rootdir/res/images/mmi/fail.png:root/res/images/mmi/fail.png \
+    device/huawei/g620s/rootdir/res/images/mmi/pass.png:root/res/images/mmi/pass.png
 
 PRODUCT_COPY_FILES += \
     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml \
@@ -363,7 +373,7 @@ PRODUCT_PACKAGES += \
     p2p_supplicant_overlay.conf
 
 PRODUCT_PROPERTY_OVERRIDES += \
-       dalvik.vm.heapgrowthlimit=128m
+    dalvik.vm.heapgrowthlimit=128m
 
 #Set default profile to FUT
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -386,6 +396,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=320
 
+#model and config device
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.model=G620S-L01
+    ro.product.name=G620S-L01
+
 # Recovery
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.cwm.forbid_format=/fsg,/firmware,/persist,/boot
@@ -394,6 +409,4 @@ $(call inherit-product, build/target/product/full.mk)
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
-$(call inherit-product-if-exists, vendor/huawei/c8817d/c8817d-vendor.mk)
-
-$(call inherit-product-if-exists, vendor/dianlujitao/blobs.mk)
+$(call inherit-product-if-exists, vendor/huawei/g620s/g620s-vendor.mk)
