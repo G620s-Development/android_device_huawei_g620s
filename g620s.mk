@@ -396,11 +396,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=320
 
-#model and config device
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.product.model=G620S-L01
-    ro.product.name=G620S-L01
-
 # Recovery
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.cwm.forbid_format=/fsg,/firmware,/persist,/boot
