@@ -30,6 +30,6 @@
 LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),g620s)
-include device/huawei/g620s/kernel/AndroidKernel.mk
+#include device/huawei/g620s/kernel/AndroidKernel.mk
 include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
