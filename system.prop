@@ -1,8 +1,4 @@
-#
-# system.prop for msm8916
-#
 
-#rild.libpath=/system/lib/libreference-ril.so
 rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
 persist.rild.nitz_plmn=
@@ -152,11 +148,10 @@ ro.min_freq=800000
 #PPPOE config enable
 ro.config.pppoe_enable=1
 
-#the fucking huawei stuff
+#Camera
+ro.config.hw_camera_hdr=true
 ro.config.camera_target_track=true
 ro.config.hw_camera_davinci=true
-ro.config.hw_camera_hdr=true
 ro.config.hw_camera_mfd=true
-ro.config.hw_face_detection=true
-ro.config.hw_camera_burstTip=true
-ro.config.hw_camera_bestShot=true
+persist.camera.longshot.enable=true
+ro.config.camerarc=true
