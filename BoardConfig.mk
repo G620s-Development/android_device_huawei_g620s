@@ -18,7 +18,6 @@
 #
 # Product-specific compile-time definitions.
 #
-
 LOCAL_PATH := device/huawei/g620s
 
 -include vendor/huawei/g620s/BoardConfigVendor.mk
@@ -26,7 +25,6 @@ LOCAL_PATH := device/huawei/g620s
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
 TARGET_NO_BOOTLOADER := true
-#TARGET_NO_KERNEL := false
 TARGET_NO_RADIOIMAGE := true
 TARGET_NO_RPC := true
 
@@ -63,10 +61,9 @@ BLUETOOTH_HCI_USE_MCT := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
 # Camera
-#COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_USE_VENDOR_CAMERA_EXT := true
-
+COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 
 # Classpath
 PRODUCT_BOOT_JARS := $(subst $(space),:,$(PRODUCT_BOOT_JARS))

@@ -120,6 +120,7 @@ PRODUCT_COPY_FILES += \
     device/huawei/g620s/rootdir/res/images/mmi/fail.png:root/res/images/mmi/fail.png \
     device/huawei/g620s/rootdir/res/images/mmi/pass.png:root/res/images/mmi/pass.png
 
+# Permissions
 PRODUCT_COPY_FILES += \
     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -175,12 +176,8 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    mm-qcamera-app \
     camera.msm8916 \
-    libmmcamera_interface \
-    libmmjpeg_interface \
-    libmm-qcamera \
-    libqomx_core
+    libmm-qcamera
 
 # Display
 PRODUCT_PACKAGES += \
