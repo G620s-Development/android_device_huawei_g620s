@@ -369,9 +369,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant_overlay.conf \
     p2p_supplicant_overlay.conf
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapgrowthlimit=128m
-
 #Set default profile to FUT
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.logkit.ctrlcode=1
@@ -386,14 +383,17 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.whitelist=/system/etc/whitelist_appops.xml
 
+# Qualcomm
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=/vendor/lib/libqc-opt.so \
-    persist.radio.apm_sim_not_pwdn=1
+    persist.timed.enable=true \
+    ro.qualcomm.cabl=0 \
+    ro.vendor.extension_library=/vendor/lib/libqc-opt.so
+    
+# USB
+PRODUCT_PROPERTY_OVERRIDES += \ 
+    persist.sys.usb.config=mtp,adb
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=320
-
-#model and config device
+# model and config device
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.model=G620S-L01
     ro.product.name=G620S-L01
@@ -403,7 +403,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.cwm.forbid_format=/fsg,/firmware,/persist,/boot
 
 $(call inherit-product, build/target/product/full.mk)
-
-$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 $(call inherit-product-if-exists, vendor/huawei/g620s/g620s-vendor.mk)
