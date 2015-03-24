@@ -44,7 +44,7 @@ dalvik.vm.heapminfree=2m
 dalvik.vm.heapmaxfree=8m
 
 
-# dpm module - cne module
+# dpm module cne module
 persist.cne.feature=0
 persist.dpm.feature=0
 
