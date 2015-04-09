@@ -378,22 +378,21 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.logkit.ctrlcode=1
 
-# appops configuration
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp,adb
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.strict_op_enable=false
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.whitelist=/system/etc/whitelist_appops.xml
 
-# Qualcomm
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.timed.enable=true \
-    ro.qualcomm.cabl=0 \
-    ro.vendor.extension_library=/vendor/lib/libqc-opt.so
-    
-# USB
+    ro.vendor.extension_library=/vendor/lib/libqc-opt.so \
+    persist.radio.apm_sim_not_pwdn=1
+
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp,adb
+    ro.sf.lcd_density=320
 
 # model and config device
 PRODUCT_PROPERTY_OVERRIDES += \
