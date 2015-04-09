@@ -21,7 +21,6 @@ debug.composition.type=c2d
 persist.hwc.mdpcomp.enable=true
 debug.mdpcomp.logs=0
 persist.hwc.ptor.enable=true
-dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 debug.sf.gpu_comp_tiling=1
@@ -112,9 +111,6 @@ audio.offload.gapless.enabled=true
 voice.playback.conc.disabled=false
 voice.record.conc.disabled=false
 voice.voip.conc.disabled=false
-
-#Set composition for USB
-persist.sys.usb.config=mtp,adb
 
 #Set read only default composition for USB
 #ro.sys.usb.default.config=diag,serial_smd,rmnet_bam,adb
