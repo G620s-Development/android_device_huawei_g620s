@@ -27,6 +27,14 @@ debug.sf.gpu_comp_tiling=1
 debug.enable.sglscale=1
 lpa.decode=true
 
+# Dalvik
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heapgrowthlimit=96m
+dalvik.vm.heapsize=256m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=2m
+dalvik.vm.heapmaxfree=8m
+
 
 # system props for the cne module
 persist.cne.feature=0
