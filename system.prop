@@ -35,7 +35,6 @@ dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.heapminfree=2m
 dalvik.vm.heapmaxfree=8m
 
-
 # system props for the cne module
 persist.cne.feature=0
 
